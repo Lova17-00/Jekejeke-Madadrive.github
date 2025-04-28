@@ -1,0 +1,689 @@
+/* Base Styles */
+:root {
+    --primary-color: #152030;
+    --accent-color: #e9a522;
+    --light-text: #ffffff;
+    --dark-text: #152030;
+    --dark-blue: #0d1520;
+    --gold: #d4af37;
+    --light-text: #ffffff;
+    --secondary-text: #a8a8a8;
+}
+
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Teko:wght@400&family=Cormorant+Infant:wght@700&display=swap');
+
+/* Styles généraux */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-blue);
+    color: var(--light-text);
+}
+
+/* Modification des paragraphes */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 800; /* extrabold */
+    letter-spacing: 6px;
+}
+
+/* Modification des h1 */
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400; /* regular */
+    font-size: 88px;
+}
+
+/* Modification des h2 */
+h2 {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 700; /* bold */
+    font-size: 64px;
+}
+
+/* Modification des liens */
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* bold */
+    font-size: 18px;
+}
+
+.section-title {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.section-number {
+    font-size: 12rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    z-index: 0;
+    line-height: 1;
+}
+
+
+/* Style général de la navbar */
+.navbar {
+    background-color: transparent;
+    padding: 1rem 2rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Style du logo */
+.logo {
+    height: 40px;
+}
+
+/* Navbar specific styles */
+.navbar {
+    background-color: transparent !important;
+    padding: 1.5rem 2rem;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar-scrolled {
+    padding: 0.8rem 2rem;
+    background-color: rgba(21, 32, 48, 0.9) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 40px;
+    transition: height 0.3s ease;
+}
+
+.navbar-scrolled .logo {
+    height: 35px;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-link {
+    color: var(--light-text) !important;
+    position: relative;
+    transition: color 0.3s;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--accent-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.chauffeur-link {
+    display: flex;
+    align-items: center;
+    color: var(--light-text);
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: color 0.3s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chauffeur-link:hover {
+    color: var(--accent-color);
+    background-color: rgba(233, 165, 34, 0.1);
+}
+
+.chauffeur-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style pour le lien actif dans la navigation */
+.nav-link.active {
+    color: var(--gold) !important;
+}
+
+/* Effet de soulignement pour le lien actif */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--gold);
+    transform: translateX(-50%);
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: rgba(21, 32, 48, 0.95);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .navbar-nav {
+        gap: 1.5rem;
+        padding: 1rem 0;
+        flex-direction: column;
+    }
+
+    .navbar-brand {
+        margin: 0 auto;
+    }
+
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(13, 21, 32, 0.7), rgba(13, 21, 32, 0.7)), url('/background/HG\ 2.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 80px; /* Espace pour la navbar transparente */
+}
+
+.hero:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, var(--dark-blue), transparent);
+}
+
+/* Hero content - Alignement amélioré */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0; /* Suppression du padding-left fixe */
+}
+
+/* Container pour le contenu du hero */
+.hero .container {
+    display: flex;
+    justify-content: flex-start; /* Aligne les éléments au début (gauche) */
+    align-items: center;
+    height: 100%;
+}
+
+/* Style pour le titre et sous-titre */
+.hero-title {
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+    max-width: 950px; /* Limite la largeur du titre */
+}
+
+/* Ajustements responsifs pour hero-content */
+@media (max-width: 991px) {
+    .hero .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero .container {
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .subtitle-container {
+        justify-content: center; /* Centré sur mobile */
+    }
+}
+
+/* Style pour la barre latérale sociale - ajustée pour l'alignement vertical */
+.social-sidebar {
+    position: fixed; /* Changé de absolute à fixed pour rester visible en défilement */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacement entre les icônes */
+    z-index: 10;
+}
+
+/* Style pour le texte "Follow us" */
+.follow-text {
+    writing-mode: vertical-rl; /* Texte vertical */
+    transform: rotate(180deg); /* Rotation pour orientation correcte */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+/* Style pour les icônes sociales */
+.social-icon {
+    color: var(--light-text);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--gold);
+}
+
+/* Sur desktop, aligner avec le logo */
+@media (min-width: 992px) {
+    .social-sidebar {
+        left: 50px; /* Ajustez cette valeur pour aligner avec le logo */
+    }
+}
+
+/* Sur tablette, ajuster la position */
+@media (min-width: 768px) and (max-width: 991px) {
+    .social-sidebar {
+        left: 30px;
+    }
+}
+
+/* Ajustement de la ligne horizontale et du sous-titre */
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: flex-start; /* Aligné à gauche */
+}
+
+@media (min-width: 992px) {
+    .subtitle-container {
+        justify-content: flex-start; /* Aligné à gauche sur desktop */
+    }
+}
+
+.horizontal-line {
+    display: inline-block;
+    width: 72px;
+    height: 2px;
+    background-color: var(--gold);
+    margin-right: 32px;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: var(--gold);
+}
+
+/* Style pour l'indicateur de défilement intégré */
+.scroll-indicator {
+    display: inline-flex;
+    align-items: center;
+    color: var(--light-text);
+    margin-top: 3rem; /* Plus d'espace au-dessus */
+    transition: color 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Pour le positionnement */
+}
+
+.scroll-indicator:hover {
+    color: var(--gold);
+}
+
+.scroll-indicator span {
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.scroll-indicator i {
+    font-size: 14px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* Content Section */
+.content-section {
+    background-color: var(--dark-blue);
+    padding: 80px 0;
+}
+
+.hiking-article {
+    margin-bottom: 30px;
+}
+
+.article-category {
+    color: var(--accent-color);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.article-category::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background-color: var(--accent-color);
+    position: absolute;
+    left: -40px;
+    top: 50%;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--light-text);
+}
+
+.hiking-article p {
+    color: #a5a5a5;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more i {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.read-more:hover {
+    color: var(--light-text);
+}
+
+/* Styles pour la nouvelle section CTA */
+.cta-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cta-background {
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(rgba(13, 21, 32, 0.5), rgba(13, 21, 32, 0.5)), url('/background/CTA\ background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(13, 21, 32, 0.3), rgba(13, 21, 32, 0.3));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.cta-intro {
+    color: var(--light-text);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.cta-title {
+    color: white;
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 700;
+    font-size: 64px;
+    margin-bottom: 40px;
+}
+
+.cta-social-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--dark-blue);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+}
+
+.cta-button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* Media queries pour la responsivité de la section CTA */
+@media screen and (max-width: 991px) {
+    .cta-title {
+        font-size: 48px;
+    }
+    
+    .cta-intro {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .cta-title {
+        font-size: 36px;
+    }
+    
+    .cta-background {
+        height: 350px;
+    }
+    
+    .cta-social-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .cta-button {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: var(--dark-blue);
+    padding: 60px 0 30px;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a5a5a5;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    color: #a5a5a5;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar {
+        background-color: var(--primary-color);
+        padding: 15px 0;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    .social-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .subtitle::before {
+        display: none;
+    }
+    
+    .article-category::before {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .cta-title {
+        font-size: 28px;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-btn {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .content-section {
+        padding: 50px 0;
+    }
+}
+

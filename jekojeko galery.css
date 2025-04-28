@@ -1,0 +1,689 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Teko:wght@400&family=Cormorant+Infant:wght@700&display=swap');
+
+/* Paragraph styles */
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 800; /* extrabold */
+    letter-spacing: 6px;
+}
+
+/* H1 styles */
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400; /* regular */
+    font-size: 88px;
+    line-height: 1.1;
+}
+
+/* Link styles */
+a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* bold */
+    font-size: 18px;
+}
+
+/* H2 styles */
+h2 {
+    font-family: 'Cormorant Infant', serif;
+    font-weight: 700; /* bold */
+    font-size: 64px;
+    line-height: 1.2;
+}
+
+/* Make sure the subtitle (which is a paragraph) keeps its special style while inheriting the new font */
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 64px;
+    }
+    
+    h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 52px;
+    }
+    
+    h2 {
+        font-size: 42px;
+    }
+    
+    p {
+        font-size: 16px;
+        letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 42px;
+    }
+    
+    h2 {
+        font-size: 36px;
+    }
+    
+    p {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+    
+    a {
+        font-size: 16px;
+    }
+}
+/* Base Styles */
+:root {
+    --primary-color: #0B1D26;
+    --accent-color: #ffb300;
+    --light-text: #ffffff;
+    --dark-text: #0B1D26;
+    --dark-blue: #0B1D26;
+    --gold: #d4af37;
+    --light-text: #ffffff;
+    --secondary-text: #a8a8a8;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: var(--light-text);
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+/* Style général de la navbar - TRANSPARENTE AVEC ESPACEMENT AMÉLIORÉ */
+.navbar {
+    background-color: transparent !important;
+    padding: 1.5rem 2rem;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Classe pour navbar avec défilement */
+.navbar-scrolled {
+    padding: 0.8rem 2rem;
+    background-color: rgba(13, 21, 32, 0.9) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du logo */
+.logo {
+    height: 40px;
+    transition: height 0.3s ease;
+}
+
+.navbar-scrolled .logo {
+    height: 35px;
+}
+
+/* Style des liens de navigation - AMÉLIORÉ POUR LISIBILITÉ ET CENTRAGE */
+.navbar-nav {
+    gap: 3rem; /* Augmenté pour meilleur espacement */
+}
+
+.nav-link {
+    color: white !important;
+    position: relative;
+    transition: color 0.3s;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+/* Style pour le lien actif dans la navigation */
+.nav-link.active {
+    color: var(--gold) !important;
+}
+
+/* Effet de soulignement pour le lien actif */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--gold);
+    transform: translateX(-50%);
+}
+
+/* Ajouter un effet de soulignement au survol */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Section "Le chauffeur" avec icône */
+.chauffeur-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: color 0.3s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chauffeur-link:hover {
+    color: var(--gold);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.chauffeur-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Media queries pour responsive */
+@media (max-width: 991px) {
+    /* Fond semi-transparent pour le menu mobile */
+    .navbar-collapse {
+        background-color: rgba(13, 21, 32, 0.95);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+    
+    /* Centrer le logo sur mobile */
+    .navbar-brand {
+        margin: 0 auto;
+    }
+    
+    /* Ajuster la position du toggler */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+/* Ajustement pour la header section pour qu'elle s'adapte à la navbar transparente */
+.header {
+    position: relative;
+    z-index: 100;
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    background-color: #b8982f;
+    border-color: #b8982f;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+}
+
+.btn-outline:hover {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+.read-more {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    color: var(--gold);
+}
+
+.read-more i {
+    margin-left: 5px;
+}
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(13, 21, 32, 0.7), rgba(13, 21, 32, 0.7)), url('/background/HG\ 3.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-top: 80px; /* Espace pour la navbar transparente */
+}
+
+.hero:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(to top, var(--dark-blue), transparent);
+}
+
+/* Hero content - Alignement amélioré */
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: left;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 0; /* Suppression du padding-left fixe */
+}
+
+/* Container pour le contenu du hero */
+.hero .container {
+    display: flex;
+    justify-content: flex-start; /* Aligne les éléments au début (gauche) */
+    align-items: center;
+    height: 100%;
+}
+
+/* Style pour le titre et sous-titre */
+.hero-title {
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-transform: capitalize;
+    max-width: 950px; /* Limite la largeur du titre */
+}
+
+/* Ajustements responsifs pour hero-content */
+@media (max-width: 991px) {
+    .hero .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero .container {
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .subtitle-container {
+        justify-content: center; /* Centré sur mobile */
+    }
+}
+
+/* Style pour la barre latérale sociale - ajustée pour l'alignement vertical */
+.social-sidebar {
+    position: fixed; /* Changé de absolute à fixed pour rester visible en défilement */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacement entre les icônes */
+    z-index: 10;
+}
+
+/* Style pour le texte "Follow us" */
+.follow-text {
+    writing-mode: vertical-rl; /* Texte vertical */
+    transform: rotate(180deg); /* Rotation pour orientation correcte */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+/* Style pour les icônes sociales */
+.social-icon {
+    color: var(--light-text);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--gold);
+}
+
+/* Sur desktop, aligner avec le logo */
+@media (min-width: 992px) {
+    .social-sidebar {
+        left: 50px; /* Ajustez cette valeur pour aligner avec le logo */
+    }
+}
+
+/* Sur tablette, ajuster la position */
+@media (min-width: 768px) and (max-width: 991px) {
+    .social-sidebar {
+        left: 30px;
+    }
+}
+
+/* Ajustement de la ligne horizontale et du sous-titre */
+.subtitle-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: flex-start; /* Aligné à gauche */
+}
+
+@media (min-width: 992px) {
+    .subtitle-container {
+        justify-content: flex-start; /* Aligné à gauche sur desktop */
+    }
+}
+
+.horizontal-line {
+    display: inline-block;
+    width: 72px;
+    height: 2px;
+    background-color: var(--gold);
+    margin-right: 32px;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    margin-bottom: 0;
+    color: var(--gold);
+}
+
+/* Style pour l'indicateur de défilement intégré */
+.scroll-indicator {
+    display: inline-flex;
+    align-items: center;
+    color: var(--light-text);
+    margin-top: 3rem; /* Plus d'espace au-dessus */
+    transition: color 0.3s ease;
+    cursor: pointer;
+    position: relative; /* Pour le positionnement */
+}
+
+.scroll-indicator:hover {
+    color: var(--gold);
+}
+
+.scroll-indicator span {
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.scroll-indicator i {
+    font-size: 14px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: var(--primary-color);
+    padding: 80px 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    height: 0;
+    padding-bottom: 66.67%; /* 2:3 aspect ratio */
+    margin-bottom: 30px;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.read-more {
+    color: var(--accent-color);
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more i {
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.read-more:hover {
+    color: var(--light-text);
+}
+
+/* Styles pour Lightbox2 */
+.lb-data .lb-caption {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.lb-data .lb-details {
+    width: 100%;
+    text-align: center;
+}
+
+.lb-nav a.lb-prev, .lb-nav a.lb-next {
+    opacity: 0.7;
+}
+
+.lb-nav a.lb-prev:hover, .lb-nav a.lb-next:hover {
+    opacity: 1;
+}
+
+/* Style pour indiquer que les images sont cliquables */
+.gallery-item a {
+    cursor: pointer;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-item a::after {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 22px;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover a::after {
+    opacity: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--gold);
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #a5a5a5;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+.copyright {
+    color: #a5a5a5;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar {
+        background-color: var(--primary-color);
+        padding: 15px 0;
+    }
+    
+    h1 {
+        font-size: 32px;
+    }
+    
+    .social-sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .subtitle::before {
+        display: none;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .gallery-item {
+        padding-bottom: 75%; /* Adjusted ratio for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 20px;
+    }
+    
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .gallery-section {
+        padding: 50px 0;
+    }
+    
+    .gallery-item {
+        padding-bottom: 100%; /* Square aspect ratio for mobile */
+    }
+}
+

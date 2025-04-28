@@ -1,0 +1,600 @@
+:root {
+    --primary-color: #0B1D26;
+    --accent-color: #ffb300;
+    --light-text: #ffffff;
+    --dark-text: #0B1D26;
+    --dark-blue: #0B1D26;
+    --gold: #d4af37;
+    --light-text: #ffffff;
+    --secondary-text: #a8a8a8;
+}
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    background-color:var(--dark-blue);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Style général de la navbar - TRANSPARENTE AVEC ESPACEMENT AMÉLIORÉ */
+.navbar {
+    background-color: transparent !important;
+    padding: 1.5rem 2rem;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Classe pour navbar avec défilement */
+.navbar-scrolled {
+    padding: 0.8rem 2rem;
+    background-color: rgba(13, 21, 32, 0.9) !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style du logo */
+.logo {
+    height: 40px;
+    transition: height 0.3s ease;
+}
+
+.navbar-scrolled .logo {
+    height: 35px;
+}
+
+/* Style des liens de navigation - AMÉLIORÉ POUR LISIBILITÉ ET CENTRAGE */
+.navbar-nav {
+    gap: 3rem; /* Augmenté pour meilleur espacement */
+}
+
+.nav-link {
+    color: white !important;
+    position: relative;
+    transition: color 0.3s;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: var(--gold) !important;
+}
+
+/* Style pour le lien actif dans la navigation */
+.nav-link.active {
+    color: var(--gold) !important;
+}
+
+/* Effet de soulignement pour le lien actif */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--gold);
+    transform: translateX(-50%);
+}
+
+/* Ajouter un effet de soulignement au survol */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: var(--gold);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Section "Le chauffeur" avec icône */
+.chauffeur-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    gap: 0.5rem;
+    transition: color 0.3s;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.chauffeur-link:hover {
+    color: var(--gold);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.chauffeur-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Media queries pour responsive */
+@media (max-width: 991px) {
+    /* Fond semi-transparent pour le menu mobile */
+    .navbar-collapse {
+        background-color: rgba(13, 21, 32, 0.95);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    
+    .navbar-nav {
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+    
+    /* Centrer le logo sur mobile */
+    .navbar-brand {
+        margin: 0 auto;
+    }
+    
+    /* Ajuster la position du toggler */
+    .navbar-toggler {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+}
+
+/* Ajustement pour la header section pour qu'elle s'adapte à la navbar transparente */
+.header {
+    position: relative;
+    z-index: 100;
+}
+
+/* Boutons */
+.btn-primary {
+    background-color: var(--gold);
+    border-color: var(--gold);
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+}
+
+.btn-primary:hover {
+    background-color: #b8982f;
+    border-color: #b8982f;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0;
+}
+
+.btn-outline:hover {
+    background-color: var(--gold);
+    color: var(--dark-blue);
+}
+
+.read-more {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+    color: var(--gold);
+}
+
+.read-more i {
+    margin-left: 5px;
+}
+
+
+/* Hero Section */
+.hero {
+    background-image: linear-gradient(rgba(13, 21, 32, 0.5), rgba(13, 21, 32, 0.7)), url('/background/HG\ 4.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    position: relative;
+    margin-bottom: 0;
+    padding-bottom: 50px; /* Ajouter un padding en bas pour l'élément de transition */
+}
+
+/* Style pour la barre latérale sociale - ajustée pour l'alignement vertical */
+.social-sidebar {
+    position: fixed; /* Changé de absolute à fixed pour rester visible en défilement */
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacement entre les icônes */
+    z-index: 10;
+}
+
+/* Style pour le texte "Follow us" */
+.follow-text {
+    writing-mode: vertical-rl; /* Texte vertical */
+    transform: rotate(180deg); /* Rotation pour orientation correcte */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: var(--light-text);
+}
+
+/* Style pour les icônes sociales */
+.social-icon {
+    color: var(--light-text);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--gold);
+}
+
+/* Sur desktop, aligner avec le logo */
+@media (min-width: 992px) {
+    .social-sidebar {
+        left: 50px; /* Ajustez cette valeur pour aligner avec le logo */
+    }
+}
+
+/* Sur tablette, ajuster la position */
+@media (min-width: 768px) and (max-width: 991px) {
+    .social-sidebar {
+        left: 30px;
+    }
+}
+
+.hero-content {
+    margin: auto;
+    text-align: center;
+    max-width: 80%;
+}
+
+.profile-image {
+    max-width: 166px;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 32px;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #e9c46a;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+/* Transition gradient between hero and next section */
+.section-transition {
+    background: linear-gradient(to bottom, rgba(11, 29, 38, 0.3) 0%, rgba(5, 15, 20, 0.8) 50%, var(--dark-blue) 100%);
+    height: 120px;
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    margin-top: -50px; /* Pour créer un chevauchement avec la section hero */
+}
+/* Media queries for responsive transition */
+@media (max-width: 992px) {
+    .section-transition {
+        height: 120px; /* Slightly shorter on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-transition {
+        height: 100px; /* Even shorter on mobile phones */
+    }
+}
+
+@media (max-width: 576px) {
+    .section-transition {
+        height: 80px; /* Shortest on small mobile devices */
+    }
+}
+
+/* Formations Section */
+.formations {
+    background-color: var(--dark-blue);
+    padding: 60px 0;
+    margin-top: -20px; /* Pour assurer une transition fluide */
+    padding-top: 20px;
+}
+
+.formations .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.formation-column {
+    flex: 1;
+}
+
+.section-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #e9c46a;
+    margin-bottom: 30px;
+}
+
+.formation-list li {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.formation-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #e9c46a;
+}
+
+/* Car Section */
+.car-section {
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.car-image {
+    height: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), transparent), url('/images/voiture.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Reservation Section */
+.reservation {
+    height: 400px;
+    background-image: url('/background/CTA\ background.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.reservation-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(13, 21, 32, 0.3), rgba(13, 21, 32, 0.3));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.reservation-subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #e9c46a;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 48px;
+    margin-bottom: 30px;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #e9c46a;
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    background-color: #0a0a0a;
+    padding: 60px 0 20px;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 60px;
+}
+
+.footer-columns {
+    display: flex;
+    gap: 60px;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e9c46a;
+}
+
+.footer-column li {
+    margin-bottom: 12px;
+}
+
+.footer-column a {
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #e9c46a;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #222;
+    color: #777;
+    font-size: 14px;
+}
+
+/* Media Queries pour Responsive */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 64px;
+    }
+    
+    .formations .container {
+        flex-direction: column;
+    }
+    
+    .footer .container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+        flex-wrap: wrap;
+    }
+    
+    .main-nav {
+        order: 3;
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .main-nav ul {
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 48px;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .social-sidebar {
+        display: none;
+    }
+    
+    .social-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 576px) {
+    .subtitle {
+        font-size: 14px;
+    }
+    
+    h1 {
+        font-size: 36px;
+    }
+    
+    .formation-list li {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    .footer-columns {
+        flex-direction: column;
+        gap: 30px;
+    }
+}

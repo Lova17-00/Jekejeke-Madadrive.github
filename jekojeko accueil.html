@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeke Jeke Madagascar Drive - Location de voitures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Teko:wght@400&family=Cormorant+Infant:wght@700&display=swap" rel="stylesheet">
+    <!-- Notre fichier CSS personnalisé -->
+    <link rel="stylesheet" href="/jekojeko accueil.css">
+</head>
+<body>
+   <!-- Modification de la structure HTML de la navbar -->
+<header class="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Logo placé au début mais avec une marge automatique pour l'espace -->
+                <a class="navbar-brand me-auto ms-lg-4" href="/jekojeko accueil.html">
+                    <img src="/images/logo barnav.png" alt="JekéJeké MadaDrive" class="logo">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation centrée avec une classe spécifique -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/jekojeko accueil.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/jekojeko nos circuit.html">Nos circuits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/jekojeko galery.html">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Lien chauffeur placé à la fin avec une marge automatique -->
+                <div class="d-none d-lg-block ms-auto me-lg-4">
+                    <a href="/jekojeko chauffeur.html" class="chauffeur-link">
+                        <img src="/images/cart.png" alt="" class="chauffeur-icon">
+                        Le chauffeur
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+<section class="hero">
+        <!-- Barre sociale - verticale sur le côté gauche -->
+    <div class="social-sidebar d-none d-md-flex">
+        <span class="follow-text">Follow us</span>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="container hero-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-left"> <!-- Changé pour être toujours centré -->
+                <div class="subtitle-container justify-content-left"> <!-- Toujours centré -->
+                    <span class="horizontal-line"></span>
+                    <p class="hero-subtitle">Explorez sans limites</p>
+                </div>
+                <h1 class="hero-title">Louez La Voiture Parfaite Pour Vos Aventures à Madagascar !</h1>
+                
+                <!-- Indicateur de défilement -->
+                <div class="scroll-indicator">
+                    <span>scroll down</span>
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   <!-- Feature 1 -->
+<section class="feature-section"> 
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 feature-content">
+                <div class="section-number">01</div>
+                <div class="subtitle-container">
+                    <span class="horizontal-line"></span>
+                    <p class="section-title">Confortable</p>
+                </div>
+                <h2 class="feature-title">Une voiture de performance.</h2>
+                <p>Découvrez l'alliance parfaite entre puissance et confort avec nos voitures adaptées aux conditions de Madagascar. Des véhicules robustes qui vous permettront d'explorer les plus beaux endroits de l'île, avec tout le confort nécessaire pour vos voyages. Suspensions renforcées, climatisation, et plus encore.</p>
+                <a href="#" class="read-more mt-3">Voir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-image">
+                    <img src="/images/truck 1.png" alt="Voiture tout-terrain de performance" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 2 -->
+<section class="feature-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2 feature-content">
+                <div class="section-number">02</div>
+                <div class="subtitle-container">
+                    <span class="horizontal-line"></span>
+                    <p class="section-title">Facile & Abordable</p>
+                </div>
+                <h2 class="feature-title">Un Tarif adapter à tout le monde.</h2>
+                <p>Nous vous offrons des options tarifaires flexibles qui s'adaptent à votre budget et vos besoins de voyage. Qu'il s'agisse d'une location à court terme ou d'un forfait mensuel avantageux, notre objectif est de rendre votre expérience de voyage à Madagascar aussi accessible que possible.</p>
+                <a href="#" class="read-more mt-3">Voir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="feature-image">
+                    <img src="/images/truck 02.png" alt="Voiture économique" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature 3 -->
+<section class="feature-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 feature-content">
+                <div class="section-number">03</div>
+                <div class="subtitle-container">
+                    <span class="horizontal-line"></span>
+                    <p class="section-title">Proche de vous</p>
+                </div>
+                <h2 class="feature-title">Réservation rapide & facile pour tous</h2>
+                <p>Notre processus de réservation simple garantit une expérience sans stress. En quelques clics, votre 4x4 est prêt à l'emploi. Nos équipes sont disponibles 7j/7 pour vous assister. Nous proposons également des services de livraison à l'aéroport ou à votre hôtel. Voyagez l'esprit tranquille avec notre service client réactif.</p>
+                <a href="#" class="read-more mt-3">Voir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="col-lg-6">
+                <div class="feature-image">
+                    <img src="/images/truck 03.png" alt="Réservation facile" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="cta-container">
+        <div class="cta-background">
+            <div class="cta-overlay">
+                <div class="cta-intro">N'ATTENDEZ PLUS !</div>
+                <h2 class="cta-title">Reserver dès maintenant !</h2>
+                <div class="cta-social-buttons">
+                    <a href="https://www.facebook.com/share/1DtXwohBsr/" class="cta-button">
+                        <i class="fab fa-facebook-f"></i>
+                        FACEBOOK
+                    </a>
+                    <a href="mailto: jekejekemadadrive@gmail.com" class="cta-button">
+                        <i class="far fa-envelope"></i>
+                        MAIL
+                    </a>
+                    <a href=" https://wa.me/qr/JS2TIDPIOXEEI1 " class="cta-button">
+                        <i class="fab fa-whatsapp"></i>
+                        WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Driver Section -->
+<section class="driver-section text-center">
+    <div class="container position-relative">
+        <div class="chauffeur-background">CHAUFFEUR</div>
+        
+        <!-- Image du chauffeur mise en premier -->
+        <div class="driver-image-container">
+            <div class="driver-image-border">
+                <div class="driver-image">
+                    <img src="/images/chauffeur.png" alt="Chauffeur Rakotombola" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="driver-header">
+                    <span class="driver-intro">JE ME NOMME</span>
+                    <h2 class="driver-name">RAKOTOMBOLA</h2>
+                    <p class="driver-position">Sedera</p>
+                </div>
+                
+                <div class="driver-content">
+                    <p>To start, print out the hiking guide and map. If it's raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I'll read the guide and know that say, in a mile, I make a right turn at the junction.</p>
+                    <a href="#" class="read-more mt-3">read more <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="/images/logo footer.png" alt="Jeke Jeke Madagadrive" class="footer-logo">
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-title">Nous sur les Blog</h3>
+                    <ul class="footer-links">
+                        <li><a href="/jekojeko galery.html">Voyage Aventure</a></li>
+                        <li><a href="mailto: jekejekemadadrive@gmail.com">Conseils Voyage</a></li>
+                        <li><a href="/jekojeko nos circuit.html">Destinations</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="footer-title">Autres infos</h3>
+                    <ul class="footer-links">
+                        <li><a href="/condition.html">Termes</a></li>
+                        <li><a href="/condition.html">Confidentialité</a></li>
+                        <li><a href="#cta-container">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>Copyright © Jeke Jeke Madagascar • Termes & Privacy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS et Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script pour gérer le fond de la navbar sur mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            // Ajouter/enlever la classe show-bg quand le menu hamburger est activé/désactivé
+            navbarCollapse.addEventListener('show.bs.collapse', function () {
+                navbar.classList.add('show-bg');
+            });
+            
+            navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+                navbar.classList.remove('show-bg');
+            });
+            
+            // Effet de défilement pour la navbar
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
