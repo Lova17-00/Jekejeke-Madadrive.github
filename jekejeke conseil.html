@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeke Jeke Madagascar Drive - Location de voitures</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;800&family=Teko:wght@400&family=Cormorant+Infant:wght@700&display=swap" rel="stylesheet">
+    <!-- Notre fichier CSS personnalisé -->
+    <link rel="stylesheet" href="/jekejeke conseil.css">
+</head>
+<body>
+   <!-- Modification de la structure HTML de la navbar -->
+<header class="header">
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <!-- Logo placé au début mais avec une marge automatique pour l'espace -->
+                <a class="navbar-brand me-auto ms-lg-4" href="/index.html">
+                    <img src="/images/logo barnav.png" alt="JekéJeké MadaDrive" class="logo">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation centrée avec une classe spécifique -->
+                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/index.html">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/jekojeko nos circuit.html">Nos circuits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/jekojeko galery.html">Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Lien chauffeur placé à la fin avec une marge automatique -->
+                <div class="d-none d-lg-block ms-auto me-lg-4">
+                    <a href="/jekojeko chauffeur.html" class="chauffeur-link">
+                        <img src="/images/cart.png" alt="" class="chauffeur-icon">
+                        Le chauffeur
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+<section class="hero">
+        <!-- Barre sociale - verticale sur le côté gauche -->
+    <div class="social-sidebar d-none d-md-flex">
+        <span class="follow-text">Follow us</span>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <div class="container hero-content">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 text-left"> <!-- Changé pour être toujours centré -->
+                <div class="subtitle-container justify-content-left"> <!-- Toujours centré -->
+                    <span class="horizontal-line"></span>
+                    <p class="hero-subtitle">La réponse à vos questions</p>
+                </div>
+                <h1 class="hero-title">CONSEIL DE VOYAGE !</h1>
+                
+                <!-- Indicateur de défilement -->
+                <div class="scroll-indicator">
+                    <span>scroll down</span>
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section Conseils de Voyage -->
+<section class="travel-tips">
+    <div class="container">
+        <!-- Première rangée de conseils: Monnaie et Sécurité -->
+        <div class="row mb-5">
+            <!-- Colonne Monnaie -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="advice-card">
+                    <div class="image-container mb-4">
+                        <img src="/images/money.jpg" alt="Monnaie à Madagascar" class="advice-image no-border" />
+                    </div>
+                    <div class="advice-content">
+                        <div class="subtitle-container">
+                            <span class="horizontal-line"></span>
+                            <p class="section-subtitle">CONSEIL</p>
+                        </div>
+                        <h3 class="advice-title">MONNAIE</h3>
+                        <div class="advice-text">
+                            <p><strong>Monnaie :</strong> L'ARIARY (MGA ou Ar), est l'unité monétaire du pays, mais l'ancien Franc malgache (Fmg) est encore mentionné dans quelques commerces.</p>
+                            <p><strong>Banque :</strong> Vous pouvez effectuer des retraits au Carte VISA et MasterCard auprès des agences bancaires dans les grandes villes.</p>
+                            <p><strong>Le taux de Change varie peuvent selon les jours, en moyenne :</strong> 1 EUR Ariary / Dollar = 5 200 Ariary / 1 Euro = 5 500 Ariary</p>
+                            <p>Les billets en Ariary : 20 000 Ar / 10 000 Ar / 5 000 Ar / 2 000 Ar / 1 000 Ar / 500 Ar / 200 Ar / 100 Ar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Colonne Sécurité -->
+            <div class="col-lg-6">
+                <div class="advice-card">
+                    <div class="image-container mb-4">
+                        <img src="/images/securité.jpg" alt="Sécurité à Madagascar" class="advice-image" />
+                    </div>
+                    <div class="advice-content">
+                        <div class="subtitle-container">
+                            <span class="horizontal-line"></span>
+                            <p class="section-subtitle">CONSEIL</p>
+                        </div>
+                        <h3 class="advice-title">SÉCURITÉ</h3>
+                        <div class="advice-text">
+                            <p>Comme pour tout pays en développement, la petite criminalité existe, en particulier dans les grandes villes. Nous vous recommandons d'être vigilants lors de vos randonnées et déplacements, il est conseillé de :</p>
+                            <ul>
+                                <li>Ne pas exhiber des signes de richesse autour de vos poignets et dans vos poches.</li>
+                                <li>Si vous séjournez dans un lieu touristique, nous vous conseillons à conserver dans des coffres forts à l'hôtel. Soyez extrêmement vigilant.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deuxième rang de conseils: Santé & Hygiène et Monnaie -->
+        <div class="row mb-5">
+            <!-- Colonne Santé & Hygiène -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="advice-card">
+                    <div class="image-container mb-4">
+                        <img src="/images/santé.jpg" alt="Santé et Hygiène à Madagascar" class="advice-image" />
+                    </div>
+                    <div class="advice-content">
+                        <div class="subtitle-container">
+                            <span class="horizontal-line"></span>
+                            <p class="section-subtitle">CONSEIL</p>
+                        </div>
+                        <h3 class="advice-title">SANTÉ & HYGIÈNE</h3>
+                        <div class="advice-text">
+                            <p>- Consulter le médecin traitant avant votre afin de prescrire une médication adéquate.<br> 
+                                - Le paludisme et fièvre jaune sont toujours répandus à Madagascar donc les comprimés antipaludéens, l'usage des Moustiquaires dans les chambres sont recommandés,<br> 
+                                - Penser aux crèmes Solaires, crèmes anti moustiques, gels hydroalcooliques... 
+                                </p>
+                            <p><strong>Vestimentaires et divers :</strong><br>  - Vêtements chauds et équipements de randonnées comme bonnes chaussures de marché, casquette, lampe torche, Bâtons de rando, maillot de bain, Imperméable, parapluie.. <br>
+                                - Prévoir quelques vêtements dans vos bagages à main dans le cas d'un éventuel souci (bagages égarés ou deviés de destination...) <br>
+                                - Prévoir de lentilles en cas de besoin 
+                            </p>
+                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Colonne Monnaie -->
+            <div class="col-lg-6">
+                <div class="advice-card">
+                    <div class="image-container mb-4">
+                        <img src="/images/climat.jpg" alt="Monnaie à Madagascar" class="advice-image" />
+                    </div>
+                    <div class="advice-content">
+                        <div class="subtitle-container">
+                            <span class="horizontal-line"></span>
+                            <p class="section-subtitle">CONSEIL</p>
+                        </div>
+                        <h3 class="advice-title">CLIMAT</h3>
+                        <div class="advice-text">
+                            <p>Le climat est en général de type tropical humide, qui se divise en 2 parties :</p>
+                            <p><strong>Hiver Austral (Juin-Août)  :</strong>  généralement frais sur les hautes terres, tempéré sur les côtes et très humides sur l'extrême Nord, le côte Est de l'île et St Marie.</p>
+                            <p><strong>Été Austral (mi-Nombre-Avril) :</strong> les pluies sont abondantes, risque de cyclones de Décembre à Mars.</p>
+                            <p><strong>Il y a une intersaison en Mai-Septembre </strong> le climat est en général tempéré et sec.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Troisième rang de conseils: Monnaie -->
+        <div class="row">
+            <!-- Colonne Monnaie -->
+            <div class="col-lg-6">
+                <div class="advice-card">
+                    <div class="image-container mb-4">
+                        <img src="/images/tabou.jpg" alt="Monnaie à Madagascar" class="advice-image" />
+                    </div>
+                    <div class="advice-content">
+                        <div class="subtitle-container">
+                            <span class="horizontal-line"></span>
+                            <p class="section-subtitle">CONSEIL</p>
+                        </div>
+                        <h3 class="advice-title">TABOU OU FADY</h3>
+                        <div class="advice-text">
+                            <p><strong>Les "Fady"</strong> constituent l'ensemble des interdits ou des Tabous de la Culture Malagasy.<br>
+                                Des recommandations qu'il faut respecter dans les lieux et sites sacrés, il montrera son intérêt pour la culture Malagasy.</p>
+                            <p>Le "Fady" ne concerne pas seulement une attitude, mais aussi les interdits pouvant être liés à une tenue vestimentaire, un jour d'accès ou coutume alimentaire... </p>
+                            <p>Votre chauffeur ou guide donnera des instructions et anecdotes y afférentes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne Monnaie -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="advice-card">
+                    <div class="image-container mb-4">
+                        <img src="/images/securité douanier.jpg" alt="Monnaie à Madagascar" class="advice-image" />
+                    </div>
+                    <div class="advice-content">
+                        <div class="subtitle-container">
+                            <span class="horizontal-line"></span>
+                            <p class="section-subtitle">CONSEIL</p>
+                        </div>
+                        <h3 class="advice-title">DIVERS & DOUANES</h3>
+                        <div class="advice-text">
+                            <p><strong>Entrée de Parc National ou Reserve :</strong> de 45 000 Ariary à 65 000 Ariary pour une journée pour les étrangers par personne,</p>
+                            <p>Guidage dépend de la durée, circuit, nombre de personne, voir sur place,</p>
+                            <p><strong>Restauration :</strong>petite déjeuner varie entre 6 000 Ar à 20 000 Ar, le plat varie entre 6 000 Ar à 50 000 Ar selon le Restaurant</p>
+                            <p><strong>Hôtel :</strong> le prix d'une chambre varie entre 80 000 Ar à 300 000 Ar une nuitée.</p>
+                            <p><strong>Pourboire :</strong> ne pas obligatoire, c'est usage à Madagascar, dépend de votre volonté et votre satisfaction</p>
+                            <p><strong>Douanes :</strong>Toutes exportations des pierres précieuses brutes, plantes endémiques protégées, animaux et objets culturels sont interdits. Ils seront saisis par les Douanes. 
+                                Toute fois, vous avez le droit de ramener de produit artisanal</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <!-- CTA Section -->
+    <section class="cta-container">
+        <div class="cta-background">
+            <div class="cta-overlay">
+                <div class="cta-intro">N'ATTENDEZ PLUS !</div>
+                <h2 class="cta-title">Reserver dès maintenant !</h2>
+                <div class="cta-social-buttons">
+                    <a href="mailto: jekejekemadadrive@gmail.com" class="cta-button">
+                        <i class="far fa-envelope"></i>
+                        MAIL
+                    </a>
+                    <a href=" https://wa.me/qr/JS2TIDPIOXEEI1 " class="cta-button">
+                        <i class="fab fa-whatsapp"></i>
+                        WHATSAPP
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="/images/logo footer.png" alt="Jeke Jeke Madagadrive" class="footer-logo">
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h3 class="footer-title">Nous sur les Blogs</h3>
+                    <ul class="footer-links">
+                        <li><a href="/jekojeko nos circuit.html">Destinations</a></li>
+                        <li><a href="mailto: jekejekemadadrive@gmail.com">Conseils Voyage</a></li>
+                        <li><a href="/jekojeko galery.html">Images</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h3 class="footer-title">Autres infos</h3>
+                    <ul class="footer-links">
+                        <li><a href="/condition.html">Termes et Confidentialité</a></li>
+                        <li><a href=" https://wa.me/qr/JS2TIDPIOXEEI1 ">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright text-center">
+                <p>Copyright © Jeke Jeke Madagascar • Termes & Privacy</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS et Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Script pour gérer le fond de la navbar sur mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.querySelector('.navbar');
+            const navbarCollapse = document.querySelector('.navbar-collapse');
+            
+            // Ajouter/enlever la classe show-bg quand le menu hamburger est activé/désactivé
+            navbarCollapse.addEventListener('show.bs.collapse', function () {
+                navbar.classList.add('show-bg');
+            });
+            
+            navbarCollapse.addEventListener('hidden.bs.collapse', function () {
+                navbar.classList.remove('show-bg');
+            });
+            
+            // Effet de défilement pour la navbar
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

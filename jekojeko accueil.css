@@ -772,7 +772,7 @@ a {
 
 /* Contenu textuel */
 .driver-content {
-    max-width: 650px;
+    max-width: 1050px;
     margin: 0 auto;
     position: relative;
     z-index: 2;

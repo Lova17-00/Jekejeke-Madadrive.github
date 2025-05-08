@@ -7,7 +7,7 @@
     --dark-blue: #0d1520;
     --gold: #d4af37;
     --light-text: #ffffff;
-    --secondary-text: #a8a8a8;
+    --secondary-text: #d7d5d5;
 }
 
 /* Import des polices */
@@ -25,7 +25,7 @@ p {
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 800; /* extrabold */
-    letter-spacing: 6px;
+    color: #ffffff;
 }
 
 /* Modification des h1 */
